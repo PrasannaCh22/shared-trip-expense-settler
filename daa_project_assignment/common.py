@@ -90,7 +90,7 @@ def rupees(paise):
     return f'Rs {paise / 100:.2f}'
 def run(title, view, handle):
     token = secrets.token_urlsafe(24)
-    port = int(os.environ.get('PORT', '8000'))
+    port = int(os.environ.get("PORT", 8000))
     class Handler(BaseHTTPRequestHandler):
             def send_page(self, extra=''):
                 body = '<!doctype html><html><meta charset="utf-8">'
@@ -182,8 +182,8 @@ def run(title, view, handle):
                     self.send_page(note('Please check: ' + str(error)))
             def log_message(self, *args):
                 pass
-    server = HTTPServer(('127.0.0.1', port),Handler)
-    print(f'{title}: open http://127.0.0.1:{port}')
+    server = HTTPServer(("0.0.0.0", port),Handler)
+    print(f'{title}:server running on port {port}')
     print('Keep this terminal open. Press Ctrl+C to stop.')
     try:
             server.serve_forever()
