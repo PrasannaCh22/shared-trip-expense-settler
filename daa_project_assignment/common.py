@@ -183,7 +183,7 @@ def run(title, view, handle):
             def log_message(self, *args):
                 pass
     server = HTTPServer(("0.0.0.0", port),Handler)
-    print(f'{title}:server running on port {port}')
+    print(f'{title}:open http://127.0.0.1:{port}')
     print('Keep this terminal open. Press Ctrl+C to stop.')
     try:
             server.serve_forever()
