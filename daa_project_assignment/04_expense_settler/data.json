@@ -1,0 +1,18 @@
+{
+  "people": [
+    "Asha",
+    "Balu",
+    "Chitra"
+  ],
+  "expenses": [
+    {
+      "description": "Taxi",
+      "payer": "Asha",
+      "amount": 90000,
+      "members": [
+        "Balu",
+        "Chitra"
+      ]
+    }
+  ]
+}
